@@ -1,0 +1,37 @@
+
+
+[editor]
+line-number = "relative"
+mouse = true
+auto-completion = true
+true-color = true
+auto-info = true
+completion-trigger-len = 1
+scroll-lines = 3
+middle-click-paste = true
+
+[editor.cursor-shape]
+insert= "bar"
+normal= "block"
+select= "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-messages = true
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[keys.normal]
+#
