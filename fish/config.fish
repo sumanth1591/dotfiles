@@ -248,7 +248,7 @@ function test_letters
 end
 ###############################end functions#####################
 
-# pipes.sh
+# ~/Documents/pipes.sh
 
 
 if [ (math (random)'%2') -eq 1 ]
