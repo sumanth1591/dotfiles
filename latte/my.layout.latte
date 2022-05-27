@@ -105,6 +105,7 @@ activityId=
 formfactor=2
 immutability=1
 lastScreen=-1
+layoutId=
 location=3
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
@@ -121,7 +122,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][182][Applets][184][Configuration]
-PreloadWeight=6
+PreloadWeight=5
 
 [Containments][182][Applets][185]
 immutability=1
@@ -180,7 +181,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][182][Applets][192][Configuration]
-PreloadWeight=13
+PreloadWeight=15
 
 [Containments][182][Applets][193]
 immutability=1
@@ -194,17 +195,14 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][182][Applets][194][Configuration]
-PreloadWeight=0
+PreloadWeight=15
 
 [Containments][182][Applets][245]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][182][Applets][245][Configuration]
-PreloadWeight=10
-
-[Containments][182][Applets][246][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][182][ConfigDialog]
 DialogHeight=540
@@ -234,7 +232,7 @@ raiseOnDesktopChange=false
 settingsComplexity=4
 timerHide=700
 timerShow=200
-viewType=0
+viewType=1
 visibility=0
 wallpaperplugin=org.kde.image
 
@@ -262,7 +260,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][25][Applets][195][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][25][Applets][195][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -303,7 +301,7 @@ immutability=1
 plugin=org.kde.plasma.userswitcher
 
 [Containments][25][Applets][206][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][25][Applets][206][Configuration][ConfigDialog]
 DialogHeight=540
@@ -401,7 +399,7 @@ immutability=1
 plugin=org.kde.plasma.colorpicker
 
 [Containments][25][Applets][242][Configuration]
-PreloadWeight=14
+PreloadWeight=0
 
 [Containments][25][Applets][242][Configuration][General]
 history=#292d3e,#4e3c63
@@ -411,7 +409,7 @@ immutability=1
 plugin=org.kde.plasma.betterinlineclock
 
 [Containments][25][Applets][244][Configuration]
-PreloadWeight=81
+PreloadWeight=51
 
 [Containments][25][Applets][244][Configuration][Appearance]
 enabledCalendarPlugins=/usr/lib/qt/plugins/plasmacalendarplugins/astronomicalevents.so,/usr/lib/qt/plugins/plasmacalendarplugins/holidaysevents.so
@@ -440,16 +438,16 @@ appletOrder=241;227;229;228;196;218;195;242;181;244;180;207;206
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
 autoSizeEnabled=false
-backgroundRadius=8
 configurationSticker=true
 dragActiveWindowEnabled=true
 floatingInternalGapIsForced=false
-iconSize=40
+iconSize=36
 inConfigureAppletsMode=true
 mouseWheelActions=false
 panelPosition=10
 panelSize=100
 panelTransparency=45
+plasmaBackgroundForPopups=true
 screenEdgeMargin=-1
 shadows=None
 shadowsUpgraded=true
@@ -458,6 +456,7 @@ splitterPosition2=6
 taskScrollAction=ScrollNone
 tasksUpgraded=true
 thickMargin=11
+titleTooltips=false
 zoomLevel=0
 
 [Containments][25][Indicator]

@@ -7,8 +7,12 @@ set DOTFILES "$HOME/Documents/dotfiles"
 
 
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
+ if status is-interactive
+  if [ (math (random)'%2') -eq 1 ]
+    ~/Documents/scripts/pipes/pipes.sh
+  else
+    ~/Documents/scripts/pipes/pipesX.sh
+  end
 end
 
 set fish_greeting
@@ -171,12 +175,6 @@ bind '$' __history_previous_command_arguments
 ############
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
-#function fish_user_key_bindings
-#fish_default_key_bindings
-#   fish_vi_key_bindings
-#end
-### END OF VI MODE ###
-
 function evil
   switch $argv[1]
     case 1 
@@ -196,8 +194,10 @@ end
 
 function test_letters
   switch $argv[1]
-    case "i"
+    case "a"
       set is_instant 1
+    case "i"
+      set is_instant 0
     case "*"
       set is_instant 0
   end
@@ -243,12 +243,11 @@ function test_letters
   echo -ne "$confusions"
   switch $argv[2]
     case "unicode"
+      echo \n
       curl https://www.cl.cam.ac.uk/~mgk25/ucs/Postscript.txt
   end
 end
 ###############################end functions#####################
-
-# ~/Documents/pipes.sh
 
 
 if [ (math (random)'%2') -eq 1 ]
@@ -279,7 +278,6 @@ alias lst="exa -la -F --icons -h --color=always -T"
 alias ping="gping"
 alias du="dust"
 alias kittyconfig="$EDITOR ~/.config/kitty/kitty.conf"
-alias diff_files="kitty +kitten diff"
 alias icat="kitty +kitten icat"
 alias cd..="cd .."
 alias rec="asciinema rec" #specify a file name
@@ -288,7 +286,8 @@ alias logout="qdbus org.kde.ksmserver /KSMServer logout 0 0 0"
 alias dir="dir --color"
 alias vdir="vdir --color"
 alias mexec="chmod +x"
-#==================================pacman=========================================#
+alias cat="bat"
+#==================================pacman && paru=========================================#
 alias S="sudo pacman -S"
 alias Sy="sudo pacman -Sy"
 alias Syy="sudo pacman -Syy"
@@ -306,6 +305,8 @@ alias Syyu="sudo pacman -Syyu"
 alias Sql="pacman -Sql" #packages installed from specific repo
 alias pacman_conf="sudo nvim /etc/pacman.conf"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
+alias pS="paru"
+alias pSs="paru -Ss"
 #================================================================================#
 #zoxide init fish | source
 starship init fish | source

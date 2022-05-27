@@ -25,10 +25,16 @@ if exists('g:GuiLoaded')
   endif
 endif
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
 " vim:set et sw=2:
 
 " set guifont=MesloLGM\ Nerd\ Font:h13
-set guifont=jetBrainsMono\ Nerd\ Font:h10
+set guifont=jetBrainsMono\ Nerd\ Font:h15
 
 call plug#begin('~/.SpaceVim.d/plugged')
 
@@ -37,6 +43,8 @@ call plug#begin('~/.SpaceVim.d/plugged')
 " Plug 'davidhalter/jedi-vim'
 Plug 'kaicataldo/material.vim', {'branch': 'main'}
 Plug 'equalsraf/neovim-gui-shim' " for Ligatures
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 call plug#end()
 
@@ -47,6 +55,6 @@ let g:airline_powerline_fonts = 1
 let g:material_theme_style = "palenight"
 colorscheme material
 
-let g:python_host_prog = "/usr/bin/python"
+let g:python3_host_prog = "/usr/bin/python"
 let g:neomake_rust_enabled_makers = ['rustc']
 

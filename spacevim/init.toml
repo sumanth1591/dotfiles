@@ -39,23 +39,23 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
-[[layers]]
-name = "lang#python"
-python_interpreter = '/usr/bin/python'
-format_on_save = true
-enable_typeinfo = true
-python_file_head = [
+# [[layers]]
+# name = "lang#python"
+# python_interpreter = '/usr/bin/python'
+# format_on_save = true
+# enable_typeinfo = true
+# python_file_head = [
 #'#!/usr/bin/python',
 #'#!/usr/bin/env python',
 #'# -*- coding: utf-8 -*-',
-]
-enabled_linters = ['python'] # removed pylint
+# ]
+# enabled_linters = ['python'] # removed pylint
 
 #[[layers]]
 #name = 'lang#java'
 
-[[layers]]
-name = 'lang#rust'
+# [[layers]]
+# name = 'lang#rust'
 
 
 
