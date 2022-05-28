@@ -163,3 +163,5 @@ alias ls="exa -la -F --icons -h --color=always --no-permissions -G"
 alias diff_file="kitty +kitten diff"
 
 # zprof
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
