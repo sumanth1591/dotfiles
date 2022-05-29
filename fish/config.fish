@@ -3,6 +3,7 @@ set -U fish_user_paths $HOME/.local/bin $HOME/.emacs.d/bin /usr/local/go/bin $HO
 #set PATH $PATH:$HOME/.local/bin:$HOME/.emacs.d/bin
 set EDITOR "nvim"
 set DOTFILES "$HOME/Documents/dotfiles"
+set -gx  LC_ALL en_IN.UTF-8  
 set --universal FZF_DEFAULT_COMMAND 'fd'
 
 
@@ -31,6 +32,9 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 #  end
 #end
 
+ if status is-interactive
+    ~/Documents/scripts/pipes/pipes.sh
+ end
 
 if [ (math (random)'%2') -eq 1 ]
     colorscript -r
@@ -42,5 +46,5 @@ source ~/.config/fish/alias.fish
 source ~/.config/fish/cust_functions.fish
 
 
-#zoxide init fish | source
+zoxide init fish | source
 starship init fish | source

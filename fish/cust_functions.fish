@@ -156,12 +156,17 @@ end
 
 
 function avail
-  command -v $1 > /dev/null
+  command -v $argv[1] > /dev/null
 end
 
+function s 
+	if test $argv[1] > /dev/null
+		rg $argv[1]
+	end
+end
 
 function o
-	set a (fd . --hidden --type f | fzf --preview 'bat {}')	
+	set a (fd . --hidden --type f | fzf --prompt="\$ " --pointer="*" --preview 'bat {}')	
 	if test $status -eq 0 
 	## $argv[1] $a
 	nvim $a
@@ -170,7 +175,7 @@ end
 
 
 function d 
-	cd $(fd . --type d | fzf --preview 'ls') # when esc without choosing it goes to ~
+	cd $(fd . --type d | fzf --prompt="\$ " --pointer="*" --preview 'ls {}') # when esc without choosing it goes to ~
 	# cd $(find . -type d -print | fzf)
 end
 
