@@ -1,4 +1,4 @@
-
+theme = "tokyonight"
 
 [editor]
 line-number = "relative"
@@ -7,7 +7,9 @@ auto-completion = true
 true-color = true
 auto-info = true
 completion-trigger-len = 1
+#gutters = ["diagnostics", "line-numbers"]
 scroll-lines = 3
+shell = ["sh", "-c"]
 middle-click-paste = true
 
 [editor.cursor-shape]
