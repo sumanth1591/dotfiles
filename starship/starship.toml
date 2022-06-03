@@ -10,8 +10,8 @@ error_symbol = "[](bold red)"
 #⚡️ #
 #💀 #
 #  #
-#
-#
+#  #
+#  #
 
 #Make prompt a single line 
 [line_break]
@@ -43,7 +43,7 @@ disabled = false
 
 [username]
 # format = "$user@"
-format = "in "
+format = "  in "
 show_always=true
 style_root = "bold red"
 

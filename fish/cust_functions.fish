@@ -179,6 +179,20 @@ function d
 	# cd $(find . -type d -print | fzf)
 end
 
+function rotate
+	switch $argv[1]
+		case "-l"
+			xrandr -o 3
+		case "-r"
+			xrandr -o 1
+		case "-n"
+			xrandr -o 0 
+		case "-i"
+			xrandr -o 2
+		case "*"
+			xrandr --help
+	end
+end
 
 function test_letters
   switch $argv[1]

@@ -5,6 +5,7 @@ set EDITOR "nvim"
 set DOTFILES "$HOME/Documents/dotfiles"
 set -gx  LC_ALL en_IN.UTF-8  
 set --universal FZF_DEFAULT_COMMAND 'fd'
+set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 
 
 
