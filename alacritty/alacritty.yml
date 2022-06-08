@@ -20,7 +20,7 @@ window:
   #dimensions:
   #  columns: 0
   #  lines: 0
-  opacity: 0.7
+  opacity: 0.8
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -128,7 +128,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
+    family: jetBrainsMono Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -147,7 +147,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
+    family: jetBrainsMono Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -166,7 +166,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
+    family: jetBrainsMono Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -218,28 +218,34 @@ draw_bold_text_with_bright_colors: true
 ##      START OF COLOR SCHEMES       ##
 #######################################
 schemes:
-  tokyo-night-storm: &tokyo-night-storm
+  Sakura: &Sakura
     primary:
-      background: '0x24283b'
-      foreground: '0xa9b1d6'
+      background: '#18131e'
+      foreground: '#dd7bdc'
     normal:
-      black: '0x32344a'
-      red: '0xf7768e'
-      green: '0x9ece6a'
-      yellow: '0xe0af68'
-      blue: '0x7aa2f7'
-      magenta: '0xad8ee6'
-      cyan: '0x449dab'
-      white: '0x9699a8'
+      black: '#000000'
+      red: '#d52370'
+      green: '#41af1a'
+      yellow: '#bc7053'
+      blue: '#6964ab'
+      magenta: '#c71fbf'
+      cyan: '#939393'
+      white: '#998eac'
     bright:
-      black: '0x444b6a'
-      red: '0xff7a93'
-      green: '0xb9f27c'
-      yellow: '0xff9e64'
-      blue: '0x7da6ff'
-      magenta: '0xbb9af7'
-      cyan: '0x0db9d7'
-      white: '0xacb0d0'
+      black: '#786d69'
+      red: '#f41d99'
+      green: '#22e529'
+      yellow: '#f59574'
+      blue: '#9892f1'
+      magenta: '#e90cdd'
+      cyan: '#eeeeee'
+      white: '#cbb6ff'
+    selection:
+      background: '#c05cbf'
+      text: '#24242e'
+    cursor:
+      text: '#24242e'
+      cursor: '#ff65fd'
   ### Doom One ###
   DoomOne: &DoomOne
     primary:
@@ -599,6 +605,8 @@ Nord: &Nord
       magenta: '#b77ee0'
       cyan:    '#54ced6'
       white:   '#282a2e'
+
+
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
 ## ###################################################################
@@ -613,8 +621,9 @@ Nord: &Nord
 # *SolarizedLight
 # *SolarizedDark
 # *TomorrowNight
-# *tokyo-night-storm
-colors: *tokyo-night-storm
+# *Sakura
+colors: *Palenight
+   
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
@@ -662,15 +671,17 @@ window.opacity: 1.0
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
 
-#cursor:
+cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Block
-
+ style: Beam
+   # blinking: Off # Always, On, Off, Never
+   # blink_interval: 750
+ 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
   #unfocused_hollow: true
@@ -687,10 +698,10 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /bin/fish
+  args:
+    - -iC ~/Documents/scripts/pipes/pipes.sh
 
 # Startup directory
 #

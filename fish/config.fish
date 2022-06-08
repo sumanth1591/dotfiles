@@ -25,23 +25,11 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 ### "nvim" as manpager
 # set -x MANPAGER "nvim -c 'set ft=man' -"
 
-# if status is-interactive
-#  if [ (math (random)'%2') -eq 1 ]
-#    ~/Documents/scripts/pipes/pipes.sh
-#  else
-#    ~/Documents/scripts/pipes/pipesX.sh
-#  end
+#if [ (math (random)'%2') -eq 1 ]
+#    colorscript -r
+#else
+#    $HOME/Documents/tmp_runes/rune -r
 #end
-
- if status is-interactive
-    ~/Documents/scripts/pipes/pipes.sh
- end
-
-if [ (math (random)'%2') -eq 1 ]
-    colorscript -r
-else
-    $HOME/Documents/tmp_runes/rune -r
-end
 
 source ~/.config/fish/alias.fish
 source ~/.config/fish/cust_functions.fish
