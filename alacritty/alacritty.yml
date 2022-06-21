@@ -701,7 +701,8 @@ live_config_reload: true
 shell:
   program: /bin/fish
   args:
-    - -iC ~/Documents/scripts/pipes/pipes.sh
+     - -iC ~/Documents/scripts/pipes/pipes.sh && colorscript -r
+    #  - -iC colorscript random
 
 # Startup directory
 #

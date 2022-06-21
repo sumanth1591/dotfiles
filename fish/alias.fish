@@ -1,4 +1,5 @@
 set EDITOR "nvim"
+alias vim="nvim"
 alias jupyter_nb="jupyter notebook --no-browser"
 alias ccat="lolcat"
 alias hx="helix"

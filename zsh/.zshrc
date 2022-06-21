@@ -110,7 +110,6 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 source $ZSH/oh-my-zsh.sh
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-colorscript random #docs/gitclones
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -159,9 +158,7 @@ alias ccat="lolcat"
 alias cd..="cd .."
 # alias update_ship="curl -sS https://starship.rs/install.sh | sh"
 alias e="dolphin"
-alias ls="exa -la -F --icons -h --color=always --no-permissions -G"
+alias ls="exa -la -F --icons -h --color=always -G"
 alias diff_file="kitty +kitten diff"
 
 # zprof
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

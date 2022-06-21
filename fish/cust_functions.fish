@@ -176,7 +176,6 @@ end
 
 function d 
 	cd $(fd . --type d | fzf --prompt="\$ " --pointer="*" --preview 'ls {}') # when esc without choosing it goes to ~
-	# cd $(find . -type d -print | fzf)
 end
 
 function rotate
