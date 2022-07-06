@@ -34,7 +34,7 @@ PreloadWeight=0
 [Containments][16][Applets][59][Configuration][General]
 hoverAction=PreviewWindows
 isInLatteDock=true
-launchers59=applications:brave-browser.desktop,applications:firefox-developer-edition.desktop,applications:org.kde.dolphin.desktop,applications:kitty.desktop,applications:systemsettings.desktop,applications:org.manjaro.pamac.manager.desktop,applications:Mailspring.desktop,applications:code-oss.desktop,applications:telegramdesktop.desktop
+launchers59=applications:brave-browser.desktop,applications:firefox-developer-edition.desktop,applications:org.kde.dolphin.desktop,applications:cool-retro-term.desktop,applications:systemsettings.desktop,applications:org.manjaro.pamac.manager.desktop,applications:Mailspring.desktop,applications:code-oss.desktop,applications:telegramdesktop.desktop,applications:org.gnome.Rhythmbox3.desktop,applications:appimagekit_78fff7bd43f3b74a703ad66f4b5c9722-Poddr.desktop,applications:mgba-qt.desktop
 manualScrollTasksType=Disabled
 scrollTasksEnabled=true
 showWindowActions=true
@@ -60,7 +60,7 @@ lengthExtMargin=8
 manualScrollTasksType=VerticalHorizontal
 minLength=21
 panelSize=100
-panelTransparency=65
+panelTransparency=45
 screenEdgeMargin=9
 scrollTasksEnabled=true
 shadowColor=263238
@@ -122,7 +122,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][182][Applets][184][Configuration]
-PreloadWeight=5
+PreloadWeight=23
 
 [Containments][182][Applets][185]
 immutability=1
@@ -173,40 +173,44 @@ plugin=org.kde.plasma.volume
 [Containments][182][Applets][191][Configuration]
 PreloadWeight=0
 
+[Containments][182][Applets][191][Configuration][ConfigDialog]
+DialogHeight=1013
+DialogWidth=937
+
 [Containments][182][Applets][191][Configuration][General]
-currentTab=streams
+raiseMaximumVolume=true
 
 [Containments][182][Applets][192]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][182][Applets][192][Configuration]
-PreloadWeight=15
-
-[Containments][182][Applets][193]
-immutability=1
-plugin=org.kde.plasma.networkmanagement
-
-[Containments][182][Applets][193][Configuration]
-PreloadWeight=0
+PreloadWeight=77
 
 [Containments][182][Applets][194]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][182][Applets][194][Configuration]
-PreloadWeight=15
+PreloadWeight=97
 
-[Containments][182][Applets][245]
+[Containments][182][Applets][276]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][182][Applets][276][Configuration]
+PreloadWeight=2
+
+[Containments][182][Applets][277]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
-[Containments][182][Applets][245][Configuration]
+[Containments][182][Applets][277][Configuration]
 PreloadWeight=0
 
 [Containments][182][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1013
+DialogWidth=937
 
 [Containments][182][General]
 extraItems=org.kde.plasma.mediacontroller,org.kde.plasma.nightcolorcontrol,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.notifications,org.kde.plasma.bluetooth,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.battery
@@ -244,8 +248,8 @@ plugin=org.kde.plasma.showdesktop
 PreloadWeight=0
 
 [Containments][25][Applets][180][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=499
+DialogWidth=937
 
 [Containments][25][Applets][181]
 immutability=1
@@ -267,8 +271,19 @@ chartFace=org.kde.ksysguard.linechart
 title=Network speed
 
 [Containments][25][Applets][195][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1013
+DialogWidth=1890
+
+[Containments][25][Applets][195][Configuration][FaceGrid][Appearance]
+chartFace=org.kde.ksysguard.linechart
+showTitle=false
+
+[Containments][25][Applets][195][Configuration][FaceGrid][SensorColors]
+network/all/download=197,14,210
+network/all/upload=27,210,14
+
+[Containments][25][Applets][195][Configuration][FaceGrid][Sensors]
+highPrioritySensorIds=["network/all/upload"]
 
 [Containments][25][Applets][195][Configuration][SensorColors]
 network/all/download=197,14,210
@@ -282,11 +297,26 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][25][Applets][196][Configuration]
-PreloadWeight=46
+PreloadWeight=0
 
 [Containments][25][Applets][196][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
+showTitle=false
 title=Memory Usage
+
+[Containments][25][Applets][196][Configuration][ConfigDialog]
+DialogHeight=1013
+DialogWidth=1890
+
+[Containments][25][Applets][196][Configuration][FaceGrid][Appearance]
+chartFace=org.kde.ksysguard.linechart
+showTitle=false
+
+[Containments][25][Applets][196][Configuration][FaceGrid][SensorColors]
+memory/physical/used=197,14,210
+
+[Containments][25][Applets][196][Configuration][FaceGrid][Sensors]
+highPrioritySensorIds=["memory/physical/used"]
 
 [Containments][25][Applets][196][Configuration][SensorColors]
 memory/physical/used=197,14,210
@@ -301,7 +331,7 @@ immutability=1
 plugin=org.kde.plasma.userswitcher
 
 [Containments][25][Applets][206][Configuration]
-PreloadWeight=0
+PreloadWeight=4
 
 [Containments][25][Applets][206][Configuration][ConfigDialog]
 DialogHeight=540
@@ -324,11 +354,15 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][25][Applets][218][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][25][Applets][218][Configuration][Appearance]
 chartFace=org.kde.ksysguard.barchart
 title=Individual Core Usage
+
+[Containments][25][Applets][218][Configuration][ConfigDialog]
+DialogHeight=1013
+DialogWidth=1890
 
 [Containments][25][Applets][218][Configuration][SensorColors]
 cpu/cpu.*/usage=82,148,226
@@ -353,8 +387,8 @@ plugin=org.kde.windowtitle
 PreloadWeight=0
 
 [Containments][25][Applets][227][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1013
+DialogWidth=937
 
 [Containments][25][Applets][227][Configuration][General]
 containmentType=Latte
@@ -365,13 +399,6 @@ immutability=1
 plugin=org.kde.plasma.appmenu
 
 [Containments][25][Applets][228][Configuration]
-PreloadWeight=0
-
-[Containments][25][Applets][229]
-immutability=1
-plugin=org.kde.latte.separator
-
-[Containments][25][Applets][229][Configuration]
 PreloadWeight=0
 
 [Containments][25][Applets][241]
@@ -402,26 +429,46 @@ plugin=org.kde.plasma.colorpicker
 PreloadWeight=0
 
 [Containments][25][Applets][242][Configuration][General]
-history=#292d3e,#4e3c63
+history=#686768,#778da2,#b186cb,#162336
 
 [Containments][25][Applets][244]
 immutability=1
 plugin=org.kde.plasma.betterinlineclock
 
 [Containments][25][Applets][244][Configuration]
-PreloadWeight=51
+PreloadWeight=80
 
 [Containments][25][Applets][244][Configuration][Appearance]
-enabledCalendarPlugins=/usr/lib/qt/plugins/plasmacalendarplugins/astronomicalevents.so,/usr/lib/qt/plugins/plasmacalendarplugins/holidaysevents.so
+enabledCalendarPlugins=/usr/lib/qt/plugins/plasmacalendarplugins/holidaysevents.so
 showDate=false
 showSeconds=true
-showSeparator=false
 showWeekNumbers=true
 use24hFormat=0
 
 [Containments][25][Applets][244][Configuration][ConfigDialog]
-DialogHeight=1002
+DialogHeight=1013
 DialogWidth=1890
+
+[Containments][25][Applets][246]
+immutability=1
+plugin=org.kde.latte.separator
+
+[Containments][25][Applets][246][Configuration]
+PreloadWeight=0
+
+[Containments][25][Applets][275]
+immutability=1
+plugin=org.kde.plasma.pager
+
+[Containments][25][Applets][275][Configuration]
+PreloadWeight=0
+
+[Containments][25][Applets][275][Configuration][ConfigDialog]
+DialogHeight=1013
+DialogWidth=937
+
+[Containments][25][Applets][275][Configuration][General]
+showWindowIcons=true
 
 [Containments][25][ConfigDialog]
 DialogHeight=1254
@@ -434,10 +481,9 @@ PreloadWeight=0
 alignment=10
 alignmentUpgraded=true
 animationsEnabled=false
-appletOrder=241;227;229;228;196;218;195;242;181;244;180;207;206
+appletOrder=241;227;246;228;244;196;218;195;242;275;181;180;207;206
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
-autoSizeEnabled=false
 configurationSticker=true
 dragActiveWindowEnabled=true
 floatingInternalGapIsForced=false
@@ -445,18 +491,17 @@ iconSize=36
 inConfigureAppletsMode=true
 mouseWheelActions=false
 panelPosition=10
+panelShadows=false
 panelSize=100
 panelTransparency=45
-plasmaBackgroundForPopups=true
 screenEdgeMargin=-1
 shadows=None
 shadowsUpgraded=true
 splitterPosition=5
-splitterPosition2=6
+splitterPosition2=7
 taskScrollAction=ScrollNone
 tasksUpgraded=true
 thickMargin=11
-titleTooltips=false
 zoomLevel=0
 
 [Containments][25][Indicator]
@@ -483,7 +528,7 @@ disableBordersForMaximizedWindows=false
 icon=
 lastUsedActivity=
 launchers=
-popUpMargin=-1
+popUpMargin=7
 preferredForShortcutsTouched=false
 schemeFile=
 showInMenu=true
